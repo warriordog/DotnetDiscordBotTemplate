@@ -6,7 +6,7 @@ using DSharpPlus.EventArgs;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace DiscordBotTemplate
+namespace DiscordBot.Bot
 {
     public class BotMain
     {

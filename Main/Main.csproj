@@ -3,20 +3,35 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
-        <RootNamespace>DiscordBotTemplate</RootNamespace>
+        <RootNamespace>DiscordBot.Main</RootNamespace>
+        <AssemblyName>DiscordBot.Main</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="DSharpPlus" Version="4.0.0-rc2" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
       <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="5.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="appsettings.Production.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="install.sh">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="start.sh">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="discordbot.service">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Bot\Bot.csproj" />
     </ItemGroup>
 </Project>

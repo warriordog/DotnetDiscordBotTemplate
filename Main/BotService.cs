@@ -1,9 +1,10 @@
 using System.Threading;
 using System.Threading.Tasks;
+using DiscordBot.Bot;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace DiscordBotTemplate
+namespace DiscordBot.Main
 {
     public class BotService : IHostedService
     {

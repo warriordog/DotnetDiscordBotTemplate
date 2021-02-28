@@ -1,0 +1,13 @@
+[Unit]
+Description=Discord Bot
+After=network.target
+
+[Service]
+Type=exec
+Restart=always
+WorkingDirectory=/opt/DiscordBot
+User=discordbot
+ExecStart=/opt/DiscordBot/start.sh
+
+[Install]
+WantedBy=multi-user.target
