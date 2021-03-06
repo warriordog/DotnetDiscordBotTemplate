@@ -24,12 +24,20 @@ namespace DiscordBot.Bot
                 {
                     Token = options.DiscordToken,
                     TokenType = TokenType.Bot,
-                    LoggerFactory = loggerFactory
+                    LoggerFactory = loggerFactory,
+                    Intents = DiscordIntents.Guilds | DiscordIntents.DirectMessages | DiscordIntents.GuildMessages
                 }
             );
 
             // Register event handler
             _discord.MessageCreated += HandleMessage;
+            
+            // Log when bot joins a server.
+            _discord.GuildCreated += (d, e) =>
+            {
+                _logger.LogInformation($"Joined server {e.Guild.Id} ({e.Guild.Name})");
+                return Task.CompletedTask;
+            };
         }
 
         private async Task HandleMessage(DiscordClient sender, MessageCreateEventArgs e)
