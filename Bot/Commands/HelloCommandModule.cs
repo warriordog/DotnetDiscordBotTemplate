@@ -24,6 +24,8 @@ namespace DiscordBot.Bot.Commands
             // Setup logging context
             using (_logger.BeginScope($"HelloCommand@{ctx.Message.Id.ToString()}"))
             {
+                _logger.LogDebug("Invoked by [{user}]", ctx.User);
+                
                 try
                 {
                     // Reply
