@@ -10,8 +10,9 @@ This repository should also work with with Visual Studio, VS Code, or the dotnet
 ### Setup
 A few basic setup steps are required in order to run the sample bot. These are:
 1. Register a bot with the [Discord Developer Portal](https://discord.com/developers/docs/intro), and get an auth / access token.
-2. Run `dotnet user-secrets init`.
-3. Run `dotnet user-secrets set "BotOptions:DiscordToken" "INSERT TOKEN HERE"`, using the token from step 1.
+2. Open a terminal / command prompt to the `Main` folder.
+3. Run `dotnet user-secrets init`.
+4. Run `dotnet user-secrets set "DiscordAuth:DiscordToken" "INSERT TOKEN HERE"`, using the token from step 1.
 
 ### Sample bot
-The sample bot responds to any message containing `bot!` with `Hello, world!`. It will not join any servers on its own, so you will need to invite it to a server in the typical way. Make sure to assign the `bot` scope and request permission to send messages.
+The sample bot responds to `bot!hello` with `Hello, world!`. It will not join any servers on its own, so you will need to invite it to a server in the typical way. Make sure to assign the `bot` scope and request permission to send messages.

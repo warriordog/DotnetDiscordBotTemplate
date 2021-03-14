@@ -24,7 +24,10 @@ namespace DiscordBot.Main
                     {
                         // Inject config
                         services.AddOptions<BotOptions>()
-                            .Bind(ctx.Configuration.GetSection(nameof(BotOptions)))
+                            .Bind(ctx.Configuration.GetSection("BotOptions"))
+                            .ValidateDataAnnotations();
+                        services.AddOptions<DiscordAuthOptions>()
+                            .Bind(ctx.Configuration.GetSection("DiscordAuth"))
                             .ValidateDataAnnotations();
 
                         // Inject main app logic

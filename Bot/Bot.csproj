@@ -7,7 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="DSharpPlus" Version="4.0.0-nightly-00810" />
+      <PackageReference Include="DSharpPlus" Version="4.0.0-nightly-00814" />
+      <PackageReference Include="DSharpPlus.CommandsNext" Version="4.0.0-nightly-00814" />
       <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="5.0.0" />
     </ItemGroup>
 
