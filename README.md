@@ -1,5 +1,8 @@
 # DotnetDiscordBotTemplate
-Template project for creating Discord bots with .NET, using the DSharpPlus library. Sample code is completely cross-platform and modular. Use of Jetbrain Rider is recommended, but not required. The code should be fully runnable with Visual Studio, VS Code, or the dotnet CLI.
+Template project for creating Discord bots with .NET, using the DSharpPlus library.
+Sample code is completely cross-platform and modular.
+Use of Jetbrains Rider is recommended but not required.
+This repository should also work with with Visual Studio, VS Code, or the dotnet CLI.
 
 ### Requirements
 * .NET 5
