@@ -5,7 +5,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace DiscordBot.Main
 {
-    class Program
+    internal static class Program
     {
         public static async Task Main(string[] args)
         {
